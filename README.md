@@ -21,8 +21,6 @@ sudo shutdown now
 In `/rw/config/yubikey.rules`
 ```
 ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_SECURITY_TOKEN}=="1", RUN+="/rw/config/yubikey-detach.sh"
-ACTION=="add", SUBSYSTEM=="usb", ENV{ID_SECURITY_TOKEN}=="1", RUN+="/rw/config/yubikey-attach-vault.sh"
-
 ```
 In '/rw/config/yubikey-detach.sh'
 ```
@@ -38,13 +36,6 @@ else
     /usr/bin/qrexec-client-vm dom0 custom.LockScreen # Trigger RPC if YubiKey is not connected
 fi
 ```
-In `/rw/config/yubkikey-attach-vault.sh'
-```
-#!/bin/bash
-
-touch /tmp/yubikey_attached
-qvm-usb attach vault sys-usb:4-4 # Replace with your actual command to attach the YubiKey to the vault VM
-```
-Then `sudo chmod +x /rw/config/yubikey-detach.sh && sudo chmod +x /rw/config/yubikey-attach-vault.sh && sudo udevadm control --reload-rules && sudo udevadm trigger' 
+Then `sudo chmod +x /rw/config/yubikey-detach.sh && sudo udevadm control --reload-rules && sudo udevadm trigger' 
 
 
