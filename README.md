@@ -36,6 +36,6 @@ else
     /usr/bin/qrexec-client-vm dom0 custom.LockScreen # Trigger RPC if YubiKey is not connected
 fi
 ```
-Then `sudo chmod +x /rw/config/yubikey-detach.sh && sudo udevadm control --reload-rules && sudo udevadm trigger' 
+Then `sudo chmod +x /rw/config/yubikey-detach.sh && sudo udevadm control --reload-rules && sudo udevadm trigger` 
 
 
