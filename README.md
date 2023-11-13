@@ -2,9 +2,9 @@
 A simple, functional killswitch for use with QubesOS and Yubikey
 
 Here are some great resources for using Yubikey with QubesOS:
-https://www.qubes-os.org/doc/yubikey/
-https://forum.qubes-os.org/t/u2f-only-w-yubikey/12304
-https://github.com/QubesOS/qubes-app-yubikey
+* https://www.qubes-os.org/doc/yubikey/
+* https://forum.qubes-os.org/t/u2f-only-w-yubikey/12304
+* https://github.com/QubesOS/qubes-app-yubikey
 
 However, I wanted to use my Yubikey in order to access 2FA apps (specifically my vault and KeePassXC directory) while still using the Yubikey to shutdown the computer on removal (the guides above provide for 2FA with the Yubikey, or a lock-screen option).
 
